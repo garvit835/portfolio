@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Garvit's personal portfolio – Computer Science student and Cybersecurity enthusiast."
+    />
+    <title>Garvit | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ========== NAVBAR ========== -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">&lt;Garvit /&gt;</a>
+        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="hero-greeting">👋 Hello, I'm</p>
+        <h1 class="hero-name">Garvit</h1>
+        <p class="hero-title">
+          <span class="typed-text" id="typedText"></span
+          ><span class="cursor">|</span>
+        </p>
+        <p class="hero-description">
+          A <strong>Computer Science student</strong> and
+          <strong>Cybersecurity enthusiast</strong> passionate about building
+          secure, elegant web experiences.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+        <div class="hero-socials">
+          <a
+            href="https://github.com/garvit835"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="mailto:your-email@example.com" aria-label="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+      <div class="hero-illustration" aria-hidden="true">
+        <div class="code-window">
+          <div class="window-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <pre class="code-snippet"><code><span class="kw">const</span> <span class="fn">developer</span> = {
+  <span class="prop">name</span>: <span class="str">"Garvit"</span>,
+  <span class="prop">role</span>: <span class="str">"CS Student"</span>,
+  <span class="prop">passion</span>: [
+    <span class="str">"Cybersecurity"</span>,
+    <span class="str">"Web Dev"</span>,
+    <span class="str">"Cloud"</span>,
+  ],
+  <span class="prop">available</span>: <span class="kw">true</span>,
+};</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I'm a passionate Computer Science student with a deep interest in
+              <strong>Cybersecurity</strong>, <strong>Cloud computing</strong>,
+              and <strong>Full Stack Web Development</strong>. I enjoy tackling
+              complex problems and building solutions that are both performant
+              and secure.
+            </p>
+            <p>
+              When I'm not coding, I'm exploring the latest security
+              vulnerabilities, experimenting with cloud architectures on
+              <strong>Microsoft Azure</strong>, or contributing to open-source
+              projects.
+            </p>
+            <div class="about-stats">
+              <div class="stat-card">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Certifications</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">2+</span>
+                <span class="stat-label">Years Coding</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-interests">
+            <h3>My Interests</h3>
+            <ul class="interests-list">
+              <li>
+                <i class="fas fa-shield-halved"></i> Ethical Hacking &amp;
+                Security Analysis
+              </li>
+              <li>
+                <i class="fas fa-cloud"></i> Cloud &amp; Identity Management
+              </li>
+              <li><i class="fas fa-code"></i> Full Stack Web Development</li>
+              <li>
+                <i class="fas fa-lock"></i> Secure Software Development
+              </li>
+              <li>
+                <i class="fas fa-network-wired"></i> Network Security
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <h2 class="section-title">Tech <span>Stack</span></h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+            <div class="skill-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Responsive Design</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-server"></i> Backend</h3>
+            <div class="skill-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">REST APIs</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-shield-halved"></i> Security</h3>
+            <div class="skill-tags">
+              <span class="tag">Ethical Hacking</span>
+              <span class="tag">Penetration Testing</span>
+              <span class="tag">OWASP</span>
+              <span class="tag">Cryptography</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-cloud"></i> Cloud &amp; Tools</h3>
+            <div class="skill-tags">
+              <span class="tag">Microsoft Azure</span>
+              <span class="tag">Git &amp; GitHub</span>
+              <span class="tag">VS Code</span>
+              <span class="tag">Linux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title">My <span>Projects</span></h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-icon"><i class="fas fa-shield-halved"></i></div>
+            <h3>Security Scanner</h3>
+            <p>
+              A Python-based web vulnerability scanner that detects common
+              security flaws such as XSS, SQL Injection, and misconfigured
+              headers.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Security</span>
+              <span class="tag">OWASP</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/garvit835"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-github"></i> Code</a
+              >
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-external-link-alt"></i> Demo</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-icon"><i class="fas fa-cloud"></i></div>
+            <h3>Azure Identity Dashboard</h3>
+            <p>
+              A dashboard built on Microsoft Azure to manage user identities,
+              roles, and access policies using Azure Active Directory.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Azure</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">IAM</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/garvit835"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-github"></i> Code</a
+              >
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-external-link-alt"></i> Demo</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-icon"><i class="fas fa-globe"></i></div>
+            <h3>Portfolio Website</h3>
+            <p>
+              This very portfolio! A fully responsive personal website built
+              with HTML, CSS, and JavaScript, deployed via GitHub Pages.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/garvit835/portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-github"></i> Code</a
+              >
+              <a
+                href="https://garvit835.github.io/portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-external-link-alt"></i> Live</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card">
+            <div class="project-icon"><i class="fas fa-lock"></i></div>
+            <h3>Password Manager CLI</h3>
+            <p>
+              A command-line password manager using AES-256 encryption to
+              securely store and retrieve credentials locally.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Cryptography</span>
+              <span class="tag">CLI</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/garvit835"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-github"></i> Code</a
+              >
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-external-link-alt"></i> Demo</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card">
+            <div class="project-icon"><i class="fas fa-database"></i></div>
+            <h3>Task Manager App</h3>
+            <p>
+              A full-stack task management application with user authentication,
+              real-time updates, and a clean responsive UI.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">REST API</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/garvit835"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-github"></i> Code</a
+              >
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-external-link-alt"></i> Demo</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card">
+            <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+            <h3>Network Packet Analyzer</h3>
+            <p>
+              A network tool that captures and analyzes live packets to help
+              identify suspicious traffic patterns and potential threats.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Networking</span>
+              <span class="tag">Security</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/garvit835"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-github"></i> Code</a
+              >
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fas fa-external-link-alt"></i> Demo</a
+              >
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== RESUME ========== -->
+    <section class="section section-alt" id="resume">
+      <div class="container">
+        <h2 class="section-title">My <span>Resume</span></h2>
+        <div class="resume-grid">
+          <!-- Education -->
+          <div class="resume-column">
+            <h3 class="resume-category">
+              <i class="fas fa-graduation-cap"></i> Education
+            </h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2022 – Present</span>
+                  <h4>B.Tech in Computer Science</h4>
+                  <p>University Name · GPA: 8.5/10</p>
+                  <p>
+                    Relevant coursework: Data Structures, Algorithms, Computer
+                    Networks, Cybersecurity, Cloud Computing
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2020 – 2022</span>
+                  <h4>Higher Secondary (12th)</h4>
+                  <p>School Name · Score: 92%</p>
+                  <p>Physics, Chemistry, Mathematics, Computer Science</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience / Certifications -->
+          <div class="resume-column">
+            <h3 class="resume-category">
+              <i class="fas fa-briefcase"></i> Experience &amp; Certifications
+            </h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2024</span>
+                  <h4>Cybersecurity Intern</h4>
+                  <p>Company Name · Remote</p>
+                  <p>
+                    Conducted vulnerability assessments and assisted in
+                    implementing security controls for web applications.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2023</span>
+                  <h4>Microsoft Azure Fundamentals (AZ-900)</h4>
+                  <p>Microsoft · Certification</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2023</span>
+                  <h4>Google Cybersecurity Certificate</h4>
+                  <p>Google · Coursera</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-download">
+          <a href="assets/resume.pdf" download class="btn btn-primary">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <p class="section-subtitle">
+          Have a project in mind or just want to say hi? Drop me a message!
+        </p>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:your-email@example.com"
+                  >your-email@example.com</a
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <h4>LinkedIn</h4>
+                <a
+                  href="https://linkedin.com/in/your-profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >linkedin.com/in/your-profile</a
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-github"></i>
+              <div>
+                <h4>GitHub</h4>
+                <a
+                  href="https://github.com/garvit835"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >github.com/garvit835</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+                autocomplete="name"
+              />
+              <span class="error-msg" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+                autocomplete="email"
+              />
+              <span class="error-msg" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Project Enquiry"
+                required
+              />
+              <span class="error-msg" id="subjectError"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell me about your project..."
+                required
+              ></textarea>
+              <span class="error-msg" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="formSuccess" aria-live="polite">
+              <i class="fas fa-check-circle"></i> Message sent successfully!
+              I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          Designed &amp; Built by <strong>Garvit</strong> &middot; Open-source
+          under the
+          <a
+            href="https://opensource.org/licenses/MIT"
+            target="_blank"
+            rel="noopener noreferrer"
+            >MIT License</a
+          >
+        </p>
+        <div class="footer-socials">
+          <a
+            href="https://github.com/garvit835"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="mailto:your-email@example.com" aria-label="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
