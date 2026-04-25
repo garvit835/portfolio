@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🛡️ Garvit Ranka | Cybersecurity Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png" />
+  <link rel="preload" as="image" href="https://i.postimg.cc/5NKJ289f/bg-light.png" imagesrcset="https://i.postimg.cc/5NKJ289f/bg-light.png">
+  <link rel="preload" as="image" href="https://i.postimg.cc/YCmScd65/bg-dark.png" imagesrcset="https://i.postimg.cc/YCmScd65/bg-dark.png">
+  <!-- Meta Tags -->
+  <meta name="description" content="Garvit Ranka's Portfolio - Cybersecurity, Projects, Skills, and Contact Info" />
+  <meta property="og:title" content="Garvit Ranka Portfolio" />
+  <meta property="og:description" content="Check out Garvit's cybersecurity projects, skills, and resume!" />
+  <meta property="og:image" content="assets/images/preview.png" />
+  <meta property="og:url" content="https://garvitranka.tech" />
+  <meta name="theme-color" content="#00ffff" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- AOS Animate on Scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- fullPage.js (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.21/fullpage.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Loader + Cursor -->
+  <div class="custom-cursor"></div>
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#home" class="logo">
+      <img src="assets/images/favicon.png" alt="GR Logo" />
+    </a>
+    <ul class="nav-links" id="nav-links-list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle">🌓</button>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1 data-aos="fade-down">Hi, I'm <span>Garvit</span></h1>
+    <p data-aos="fade-up">Cybersecurity student. Breaking, building, securing.</p>
+    <a href="assets/Resume.pdf" class="btn" download>📄 Download Resume</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="about-content">
+      <div class="profile-container" data-aos="fade-right">
+        <img src="assets/images/selfimg.png" alt="Garvit Ranka" class="profile-img" />
+        <h3 class="nameplate">Garvit Ranka</h3>
+      </div>
+      <div class="about-text" data-aos="fade-left">
+        <h2>About Me</h2>
+        <p>
+          Cybersecurity student with hands-on VAPT experience and certifications from Microsoft, Oracle, and Google.
+          Actively learning data science to enhance analytical skills. Seeking an entry-level security role to apply a
+          diverse and growing technical skill set.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2 data-aos="fade-up">Projects</h2>
+    <div class="section-box" data-aos="zoom-in">
+      <div class="project-card" data-aos="zoom-in">
+        <strong>Port Scanner</strong> – A command-line tool using Python sockets to scan open ports.
+        <br />
+        <button class="modal-trigger-btn" data-modal-target="#portscanner-modal">View Details</button>
+      </div>
+      <div class="project-card" data-aos="zoom-in">
+        <strong>WebScore</strong> – A client-side OSINT tool that checks if a website is legitimate.
+        <br />
+        <button class="modal-trigger-btn" data-modal-target="#webscore-modal">View Details</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <div class="section-box" data-aos="zoom-in">
+      <ul data-aos="fade-right" style="text-align: left; max-width: 600px; margin: 0 auto;">
+        
+        <h3>Cybersecurity</h3>
+        <li style="font-size: 1rem; margin-bottom: 10px;">Vulnerability Assessment & Penetration Testing (VAPT), IAM, SIEM (e.g., Splunk), Network Monitoring (Wireshark), Social Engineering, OWASP Top 10</li>
+
+        <h3>Cloud Technologies</h3>
+        <li style="font-size: 1rem; margin-bottom: 10px;">Oracle Cloud Infrastructure (OCI), Microsoft Azure, Azure AI</li>
+        
+        <h3>Programming Languages</h3>
+        <li style="font-size: 1rem; margin-bottom: 10px;">Python, Java, C/C++, SQL</li>
+        
+        <h3>Tools & Technologies</h3>
+        <li style="font-size: 1rem; margin-bottom: 10px;">Burp Suite, OWASP ZAP, Nmap, Linux, Postman API</li>
+
+      </ul>
+    </div>
+
+  <section id="certifications" class="section">
+    <h2 data-aos="fade-up">Certifications</h2>
+    <div class="section-box" data-aos="zoom-in">
+
+      <ul class="certification-list" id="certList">
+        <li class="cert-item">Google Cybersecurity Career Certificate</li>
+        <li class="cert-item">Microsoft (SC-200) Security Operations Analyst</li>
+        <li class="cert-item">Microsoft (AZ-204) Developing Solutions for Azure</li>
+        <li class="cert-item">Microsoft (PL-300) Power BI Data Analyst</li>
+
+        <li class="cert-item">Microsoft (AZ-900) Azure Fundamentals</li>
+        <li class="cert-item">Microsoft (AI-900) AI Fundamentals</li>
+        <li class="cert-item">Microsoft (PL-900) Power Platform Fundamentals</li>
+        <li class="cert-item">Oracle (OCI) AI Foundations</li>
+        <li class="cert-item">Oracle (OCI) Data Platform Foundations</li>
+        <li class="cert-item">Oracle (OCI) Foundations</li>
+        <li class="cert-item">GitHub Fundamentals</li>
+      </ul>
+
+      <button id="toggleCertsBtn" class="certs-button">Show All 11 Certifications</button>
+
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2 data-aos="fade-up">Get In Touch</h2>
+    <div class="section-box" data-aos="zoom-in">
+      <p data-aos="fade-up" style="margin-top: 1rem;">Feel free to reach out for collaborations or just a chat!</p>
+      <div class="contact-links" data-aos="zoom-in">
+        
+        <a href="mailto:garvitranka8@gmail.com" class="contact-btn">
+          <i class="fas fa-envelope"></i> <span>Email</span>
+        </a>
+        
+        <a href="https://linkedin.com/in/garvit835" target="_blank" class="contact-btn">
+          <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
+        </a>
+        
+        <a href="https://github.com/garvit835" target="_blank" class="contact-btn">
+          <i class="fab fa-github"></i> <span>GitHub</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Garvit Ranka. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 500 // Animation duration in milliseconds (0.5 seconds)
+    });
+  </script>
+  <script src="script.js"></script>
+
+  <script>
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.body.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+  </script>
+
+  <script>
+  // Get the button and the list
+  const toggleBtn = document.getElementById('toggleCertsBtn');
+  const certList = document.getElementById('certList');
+
+  // Get the total number of items
+  const totalItems = certList.getElementsByClassName('cert-item').length;
+
+  // Set the initial button text
+  // (Change 'n+5' in CSS if you change the initial '4' here)
+  const showCount = 4; 
+  toggleBtn.textContent = `Show All ${totalItems} Certifications`;
+
+  // Add a click event listener to the button
+  toggleBtn.addEventListener('click', () => {
+    // Toggle the 'expanded' class on the list
+    certList.classList.toggle('expanded');
+    
+    // Change the button text based on the state
+    if (certList.classList.contains('expanded')) {
+      toggleBtn.textContent = 'Show Less';
+    } else {
+      toggleBtn.textContent = `Show All ${totalItems} Certifications`;
+    }
+  });
+</script>
+<div id="modal-overlay"></div>
+
+  <div class="project-modal" id="portscanner-modal">
+    <button class="modal-close-btn">&times;</button>
+    <h2>Port Scanner</h2>
+    <p>A command-line port scanning tool developed in Python. It identifies open ports on a target IP address and uses multithreading to increase scanning speed. It also includes banner grabbing to identify services running on open ports.</p>
+    
+    <div class="tech-tags">
+      <span>Python</span>
+      <span>Sockets</span>
+      <span>CLI</span>
+      <span>Multithreading</span>
+    </div>
+
+    <div class="modal-links">
+      <a href="https://github.com/garvit835/PortScanner" target="_blank" class="btn">View Code on GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-modal" id="webscore-modal">
+    <button class="modal-close-btn">&times;</button>
+    <h2>WebScore</h2>
+    <p>A client-side OSINT tool to analyze a website's reputation. It uses various APIs, including WhoisXML and Google Safe Browsing, to check for legitimacy, HTTPS status, and archive history. The frontend is built with responsive HTML/CSS and JavaScript.</p>
+    
+    <div class="tech-tags">
+      <span>JavaScript</span>
+      <span>HTML/CSS</span>
+      <span>APIs</span>
+      <span>GitHub Pages</span>
+    </div>
+
+    <div class="modal-links">
+      <a href="https://github.com/garvit835/WebScore/" target="_blank" class="btn">View Code on GitHub</a>
+      <a href="https://garvit835.github.io/WebScore/" target="_blank" class="btn">View Live Demo</a>
+    </div>
+  </div>
+</body>
+
+</html>
