@@ -53,6 +53,7 @@ if (typedEl) {
 const navbar = document.getElementById("navbar");
 const navLinks = document.querySelectorAll(".nav-links a");
 const sections = document.querySelectorAll("section[id]");
+const backToTop = document.getElementById("backToTop");
 
 function onScroll() {
   // Shadow on scroll
@@ -104,7 +105,6 @@ navLinksContainer.querySelectorAll("a").forEach((link) => {
 });
 
 // ── Back to top button ─────────────────────────────────────
-const backToTop = document.getElementById("backToTop");
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
