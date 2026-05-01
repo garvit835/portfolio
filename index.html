@@ -1,259 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🛡️ Garvit Ranka | Cybersecurity Portfolio</title>
+  <title>Garvit Ranka | Cybersecurity Portfolio</title>
 
-  <!-- Favicon -->
+  <!-- SEO & Open Graph -->
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png" />
-  <link rel="preload" as="image" href="https://i.postimg.cc/5NKJ289f/bg-light.png" imagesrcset="https://i.postimg.cc/5NKJ289f/bg-light.png">
-  <link rel="preload" as="image" href="https://i.postimg.cc/YCmScd65/bg-dark.png" imagesrcset="https://i.postimg.cc/YCmScd65/bg-dark.png">
-  <!-- Meta Tags -->
-  <meta name="description" content="Garvit Ranka's Portfolio - Cybersecurity, Projects, Skills, and Contact Info" />
-  <meta property="og:title" content="Garvit Ranka Portfolio" />
-  <meta property="og:description" content="Check out Garvit's cybersecurity projects, skills, and resume!" />
-  <meta property="og:image" content="assets/images/preview.png" />
-  <meta property="og:url" content="https://garvitranka.tech" />
-  <meta name="theme-color" content="#00ffff" />
+  <meta name="description" content="Garvit Ranka – Cybersecurity student specializing in VAPT, secure software development, and AI-driven applications. Explore projects, skills and more." />
+  <meta name="keywords" content="cybersecurity, portfolio, VAPT, ethical hacking, Python, React, TrainWise, Garvit Ranka" />
+  <meta name="author" content="Garvit Ranka" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://garvit835.github.io/" />
+  <meta property="og:title" content="Garvit Ranka | Cybersecurity Portfolio" />
+  <meta property="og:description" content="Breaking, building, securing. Explore Garvit's cybersecurity and full-stack projects." />
+  <meta property="og:image" content="https://garvit835.github.io/assets/images/og-preview.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Garvit Ranka | Cybersecurity Portfolio" />
+  <meta name="twitter:description" content="Breaking, building, securing." />
+  <meta name="twitter:image" content="https://garvit835.github.io/assets/images/og-preview.png" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- AOS Animate on Scroll -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-  <!-- fullPage.js (optional) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.21/fullpage.min.css" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-  <!-- Your CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- Loader + Cursor -->
-  <div class="custom-cursor"></div>
-  <div id="loader">
-    <div class="spinner"></div>
+
+
+  <!-- Preloader / Terminal -->
+  <div id="preloader">
+    <video autoplay muted loop playsinline class="preloader-video-bg">
+      <source src="assets/videos/preloader-bg.mp4" type="video/mp4">
+    </video>
+    <div class="preloader-overlay"></div>
+    <div class="preloader-content" style="width: 100%; max-width: 600px; text-align: left; position: relative; z-index: 2;">
+      <div class="glass-panel terminal-window" style="padding: 0; overflow: hidden; background: rgba(10, 10, 15, 0.9);">
+        <div class="terminal-header" style="background: rgba(0,0,0,0.8); padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1);">
+          <div style="display: flex; gap: 8px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f;"></span>
+          </div>
+          <span style="margin: 0 auto; font-family: monospace; color: #a1a1a6; font-size: 0.9rem;">garvit@sec-ops: ~</span>
+        </div>
+        <div class="terminal-body" style="padding: 2rem; font-family: 'Courier New', Courier, monospace; color: #00f0ff; min-height: 150px; text-align: left; font-size: 1rem;">
+          <span id="typewriter-text" style="white-space: pre-wrap; line-height: 1.6;"></span><span class="terminal-cursor" id="terminal-cursor-main">|</span>
+          <div id="preloader-prompt" style="display: none; margin-top: 1rem; align-items: center; gap: 10px;">
+            <span style="color: #27c93f; font-weight: bold;">garvit@sec-ops:~$</span>
+            <span style="color: #00f0ff;">Enable cinematic audio? (Y/N): </span>
+            <input type="text" id="preloader-input" maxlength="1" autocomplete="off" spellcheck="false" style="background: transparent; border: none; color: #fff; font-family: inherit; outline: none; width: 20px; font-size: 1rem;"><span class="terminal-cursor">_</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Matrix Rain Canvas -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Video Background (lazy-loaded via JS) -->
+  <div class="video-container">
+    <video id="scroll-video" data-src="assets/videos/vduie.mp4" muted playsinline loop preload="none"></video>
+    <div class="video-overlay"></div>
   </div>
 
   <!-- Navbar -->
-  <nav class="navbar">
-    <a href="#home" class="logo">
-      <img src="assets/images/favicon.png" alt="GR Logo" />
-    </a>
-    <ul class="nav-links" id="nav-links-list">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
+  <nav class="navbar glass-nav">
+    <a href="#home" class="logo magnetic">GR.</a>
+    <ul class="nav-links">
+      <li><a href="#about" id="nav-about" class="magnetic">About</a></li>
+      <li><a href="#projects" id="nav-projects" class="magnetic">Projects</a></li>
+      <li><a href="#skills" id="nav-skills" class="magnetic">Skills</a></li>
+      <li><a href="#contact" id="nav-contact" class="magnetic">Contact</a></li>
     </ul>
-    <button id="theme-toggle">🌓</button>
-    <div class="hamburger">
+    <div class="hamburger magnetic">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <h1 data-aos="fade-down">Hi, I'm <span>Garvit</span></h1>
-    <p data-aos="fade-up">Cybersecurity student. Breaking, building, securing.</p>
-    <a href="assets/Resume.pdf" class="btn" download>📄 Download Resume</a>
-  </section>
+  <!-- Main Content Wrappers for scrolling -->
+  <main id="smooth-wrapper">
+    <div id="smooth-content">
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="about-content">
-      <div class="profile-container" data-aos="fade-right">
-        <img src="assets/images/selfimg.png" alt="Garvit Ranka" class="profile-img" />
-        <h3 class="nameplate">Garvit Ranka</h3>
-      </div>
-      <div class="about-text" data-aos="fade-left">
-        <h2>About Me</h2>
-        <p>
-          Cybersecurity student with hands-on VAPT experience and certifications from Microsoft, Oracle, and Google.
-          Actively learning data science to enhance analytical skills. Seeking an entry-level security role to apply a
-          diverse and growing technical skill set.
-        </p>
-      </div>
+      <!-- Hero Section -->
+      <section id="home" class="hero section">
+        <div class="hero-content">
+          <h1 class="split-text">Garvit Ranka</h1>
+          <p class="subtitle fade-up">Cybersecurity student. <span id="hero-typewriter"></span><span class="hero-cursor">|</span></p>
+          <div class="fade-up" style="margin-top: 3rem;">
+            <a href="assets/Resume.pdf" class="btn glass-btn magnetic" download>Download Resume</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <div class="glass-panel about-card">
+          <div class="profile-img-container">
+            <img src="assets/images/selfimg.png" alt="Garvit Ranka" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Garvit+Ranka&background=random&size=200'" />
+          </div>
+          <div class="about-text">
+            <div class="panel-heading">
+              <span class="panel-prefix">00 //</span>
+              <h2 class="section-title fade-up">About Me</h2>
+            </div>
+            <div class="panel-divider"></div>
+            <p class="fade-up">
+              Cybersecurity student with hands-on VAPT experience and certifications from Microsoft, Oracle, and Google.
+              Actively learning data science to enhance analytical skills. Seeking an entry-level security role to apply a
+              diverse and growing technical skill set.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects section">
+        <div class="container">
+          <h2 class="section-title fade-up text-center">Projects</h2>
+          <div class="projects-grid">
+            
+            <!-- Featured Project: TrainWise -->
+            <div class="glass-card project-card fade-up" style="grid-column: 1 / -1;">
+              <div class="project-content">
+                <div class="panel-heading">
+                  <span class="panel-prefix">proj_01 //</span>
+                  <h3>TrainWise</h3>
+                </div>
+                <div class="panel-divider"></div>
+                <h4 style="color: var(--text-secondary); margin-bottom: 1rem; font-weight: 500;">Generative AI Fitness &amp; Nutrition SaaS</h4>
+                <p>A premium, AI-driven fitness ecosystem bridging the gap between static fitness apps and personal trainers. Delivers real-time, injury-safe workout routines and nutritional advice.</p>
+                
+                <ul style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; padding-left: 1.2rem; line-height: 1.6;">
+                  <li style="margin-bottom: 0.5rem;"><strong>AI Coaching:</strong> Context-aware, injury-safe routines using NVIDIA NIM API (Gemma-27B).</li>
+                  <li style="margin-bottom: 0.5rem;"><strong>Secure Architecture:</strong> Node.js/Express proxy with rate limiting and Supabase RLS isolation.</li>
+                  <li style="margin-bottom: 0.5rem;"><strong>Analytics:</strong> Interactive muscle fatigue heatmap &amp; "Digital Twin" scoring.</li>
+                  <li style="margin-bottom: 0.5rem;"><strong>Premium UI/UX:</strong> Glassmorphism aesthetic with 60fps mobile-first optimizations.</li>
+                </ul>
+
+                <div class="tech-tags">
+                  <span>React 18</span> <span>Node.js</span> <span>Supabase</span> <span>NVIDIA NIM</span> <span>Gemma-27B</span>
+                </div>
+              </div>
+              <div class="btn-group mt-auto" style="margin-top: 2rem;">
+                <a href="https://coffikallogic.xyz" target="_blank" class="btn glass-btn magnetic">Live Demo</a>
+              </div>
+            </div>
+
+            <div class="glass-card project-card fade-up">
+              <div class="project-content">
+                <div class="panel-heading">
+                  <span class="panel-prefix">proj_02 //</span>
+                  <h3>Port Scanner</h3>
+                </div>
+                <div class="panel-divider"></div>
+                <p>A command-line tool using Python sockets to scan open ports, with multithreading and banner grabbing.</p>
+                <div class="tech-tags">
+                  <span>Python</span> <span>Sockets</span> <span>CLI</span>
+                </div>
+              </div>
+              <a href="https://github.com/garvit835/PortScanner" target="_blank" class="btn glass-btn magnetic mt-auto">View GitHub</a>
+            </div>
+            
+            <div class="glass-card project-card fade-up">
+              <div class="project-content">
+                <div class="panel-heading">
+                  <span class="panel-prefix">proj_03 //</span>
+                  <h3>WebScore</h3>
+                </div>
+                <div class="panel-divider"></div>
+                <p>A client-side OSINT tool to analyze a website's reputation using WhoisXML and Google Safe Browsing APIs.</p>
+                <div class="tech-tags">
+                  <span>JavaScript</span> <span>HTML/CSS</span> <span>APIs</span>
+                </div>
+              </div>
+              <div class="btn-group mt-auto">
+                <a href="https://github.com/garvit835/WebScore/" target="_blank" class="btn glass-btn magnetic">GitHub</a>
+                <a href="https://garvit835.github.io/WebScore/" target="_blank" class="btn glass-btn magnetic">Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills & Certs Section -->
+      <section id="skills" class="skills section">
+        <div class="container">
+          <h2 class="section-title fade-up text-center">Expertise</h2>
+          <div class="skills-container" style="grid-template-columns: 1fr;">
+
+            <!-- Skills Panel -->
+            <div class="glass-panel fade-up">
+              <div class="panel-heading">
+                <span class="panel-prefix">01 //</span>
+                <h3>Skills</h3>
+              </div>
+              <div class="panel-divider"></div>
+
+              <div class="skill-group">
+                <div class="skill-group-label">🛡️ Cybersecurity</div>
+                <div class="skill-tags-row">
+                  <span class="skill-tag">VAPT</span>
+                  <span class="skill-tag">IAM</span>
+                  <span class="skill-tag">SIEM (Splunk)</span>
+                  <span class="skill-tag">Network Monitoring</span>
+                  <span class="skill-tag">Social Engineering</span>
+                  <span class="skill-tag">OWASP</span>
+                  <span class="skill-tag">Nmap</span>
+                  <span class="skill-tag">Burp Suite</span>
+                  <span class="skill-tag">OWASP ZAP</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <div class="skill-group-label">☁️ Cloud</div>
+                <div class="skill-tags-row">
+                  <span class="skill-tag">Oracle Cloud (OCI)</span>
+                  <span class="skill-tag">Microsoft Azure</span>
+                  <span class="skill-tag">Azure AI Services</span>
+                  <span class="skill-tag">Azure DevOps</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <div class="skill-group-label">💻 Development</div>
+                <div class="skill-tags-row">
+                  <span class="skill-tag">Python</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">React 18</span>
+                  <span class="skill-tag">Node.js</span>
+                  <span class="skill-tag">Java</span>
+                  <span class="skill-tag">C/C++</span>
+                  <span class="skill-tag">SQL</span>
+                  <span class="skill-tag">HTML/CSS</span>
+                  <span class="skill-tag">REST APIs</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <div class="skill-group-label">🔧 Tools</div>
+                <div class="skill-tags-row">
+                  <span class="skill-tag">Linux</span>
+                  <span class="skill-tag">Postman</span>
+                  <span class="skill-tag">Git</span>
+                  <span class="skill-tag">Supabase</span>
+                  <span class="skill-tag">Power BI</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certifications Panel -->
+            <div class="glass-panel fade-up" style="margin-top: 2rem;">
+              <div class="panel-heading">
+                <span class="panel-prefix">02 //</span>
+                <h3>Certifications</h3>
+              </div>
+              <div class="panel-divider"></div>
+              <p class="panel-hint"><span class="panel-prompt">&gt;_</span> Click any company card to expand certifications</p>
+              <div class="cert-companies">
+
+                <div class="cert-company-card magnetic" data-company="google">
+                  <div class="cert-company-icon">
+                    <svg viewBox="0 0 24 24" width="40" height="40" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                  </div>
+                  <div class="cert-company-name">Google</div>
+                  <div class="cert-company-count">1 cert</div>
+                </div>
+
+                <div class="cert-company-card magnetic" data-company="microsoft">
+                  <div class="cert-company-icon">
+                    <svg viewBox="0 0 23 23" width="40" height="40" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#F25022"/><rect x="12" y="1" width="10" height="10" fill="#7FBA00"/><rect x="1" y="12" width="10" height="10" fill="#00A4EF"/><rect x="12" y="12" width="10" height="10" fill="#FFB900"/></svg>
+                  </div>
+                  <div class="cert-company-name">Microsoft</div>
+                  <div class="cert-company-count">6 certs</div>
+                </div>
+
+                <div class="cert-company-card magnetic" data-company="oracle">
+                  <div class="cert-company-icon">
+                    <svg viewBox="0 0 60 20" width="60" height="20" xmlns="http://www.w3.org/2000/svg"><text x="0" y="18" font-family="Arial" font-size="18" font-weight="bold" fill="#F80000">ORACLE</text></svg>
+                  </div>
+                  <div class="cert-company-name">Oracle</div>
+                  <div class="cert-company-count">3 certs</div>
+                </div>
+
+                <div class="cert-company-card magnetic" data-company="github">
+                  <div class="cert-company-icon">
+                    <svg viewBox="0 0 24 24" width="40" height="40" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                  </div>
+                  <div class="cert-company-name">GitHub</div>
+                  <div class="cert-company-count">1 cert</div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <div class="glass-panel contact-card fade-up text-center">
+          <div class="panel-heading" style="justify-content: center;">
+            <span class="panel-prefix">04 //</span>
+            <h2 class="section-title">Get In Touch</h2>
+          </div>
+          <div class="panel-divider"></div>
+          <p class="panel-hint"><span class="panel-prompt">&gt;_</span> Feel free to reach out for collaborations or just a chat</p>
+          <div class="contact-links">
+            <a href="mailto:garvitranka8@gmail.com" class="magnetic contact-item">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://linkedin.com/in/garvit835" target="_blank" class="magnetic contact-item">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/garvit835" target="_blank" class="magnetic contact-item">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>&copy; 2026 Garvit Ranka. All rights reserved.</p>
+      </footer>
+
     </div>
-  </section>
+  </main>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2 data-aos="fade-up">Projects</h2>
-    <div class="section-box" data-aos="zoom-in">
-      <div class="project-card" data-aos="zoom-in">
-        <strong>Port Scanner</strong> – A command-line tool using Python sockets to scan open ports.
-        <br />
-        <button class="modal-trigger-btn" data-modal-target="#portscanner-modal">View Details</button>
-      </div>
-      <div class="project-card" data-aos="zoom-in">
-        <strong>WebScore</strong> – A client-side OSINT tool that checks if a website is legitimate.
-        <br />
-        <button class="modal-trigger-btn" data-modal-target="#webscore-modal">View Details</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <div class="section-box" data-aos="zoom-in">
-      <ul data-aos="fade-right" style="text-align: left; max-width: 600px; margin: 0 auto;">
-        
-        <h3>Cybersecurity</h3>
-        <li style="font-size: 1rem; margin-bottom: 10px;">Vulnerability Assessment & Penetration Testing (VAPT), IAM, SIEM (e.g., Splunk), Network Monitoring (Wireshark), Social Engineering, OWASP Top 10</li>
-
-        <h3>Cloud Technologies</h3>
-        <li style="font-size: 1rem; margin-bottom: 10px;">Oracle Cloud Infrastructure (OCI), Microsoft Azure, Azure AI</li>
-        
-        <h3>Programming Languages</h3>
-        <li style="font-size: 1rem; margin-bottom: 10px;">Python, Java, C/C++, SQL</li>
-        
-        <h3>Tools & Technologies</h3>
-        <li style="font-size: 1rem; margin-bottom: 10px;">Burp Suite, OWASP ZAP, Nmap, Linux, Postman API</li>
-
-      </ul>
+  <!-- Sound & Media Controls -->
+  <div class="sound-controls">
+    <div class="sound-toggle magnetic" id="media-toggle" title="Play/Pause Media">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="media-pause"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="media-play" style="display: none;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
     </div>
 
-  <section id="certifications" class="section">
-    <h2 data-aos="fade-up">Certifications</h2>
-    <div class="section-box" data-aos="zoom-in">
-
-      <ul class="certification-list" id="certList">
-        <li class="cert-item">Google Cybersecurity Career Certificate</li>
-        <li class="cert-item">Microsoft (SC-200) Security Operations Analyst</li>
-        <li class="cert-item">Microsoft (AZ-204) Developing Solutions for Azure</li>
-        <li class="cert-item">Microsoft (PL-300) Power BI Data Analyst</li>
-
-        <li class="cert-item">Microsoft (AZ-900) Azure Fundamentals</li>
-        <li class="cert-item">Microsoft (AI-900) AI Fundamentals</li>
-        <li class="cert-item">Microsoft (PL-900) Power Platform Fundamentals</li>
-        <li class="cert-item">Oracle (OCI) AI Foundations</li>
-        <li class="cert-item">Oracle (OCI) Data Platform Foundations</li>
-        <li class="cert-item">Oracle (OCI) Foundations</li>
-        <li class="cert-item">GitHub Fundamentals</li>
-      </ul>
-
-      <button id="toggleCertsBtn" class="certs-button">Show All 11 Certifications</button>
-
+    <div class="sound-toggle magnetic" id="sound-toggle" title="Toggle Sound">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="speaker-on"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.08"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="speaker-off" style="display: none;"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
     </div>
-  </section>
+  </div>
+
+  <!-- GSAP and ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2 data-aos="fade-up">Get In Touch</h2>
-    <div class="section-box" data-aos="zoom-in">
-      <p data-aos="fade-up" style="margin-top: 1rem;">Feel free to reach out for collaborations or just a chat!</p>
-      <div class="contact-links" data-aos="zoom-in">
-        
-        <a href="mailto:garvitranka8@gmail.com" class="contact-btn">
-          <i class="fas fa-envelope"></i> <span>Email</span>
-        </a>
-        
-        <a href="https://linkedin.com/in/garvit835" target="_blank" class="contact-btn">
-          <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
-        </a>
-        
-        <a href="https://github.com/garvit835" target="_blank" class="contact-btn">
-          <i class="fab fa-github"></i> <span>GitHub</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-  
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Garvit Ranka. All rights reserved.</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 500 // Animation duration in milliseconds (0.5 seconds)
-    });
-  </script>
+  <!-- Custom Script -->
   <script src="script.js"></script>
-
-  <script>
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    document.body.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-  </script>
-
-  <script>
-  // Get the button and the list
-  const toggleBtn = document.getElementById('toggleCertsBtn');
-  const certList = document.getElementById('certList');
-
-  // Get the total number of items
-  const totalItems = certList.getElementsByClassName('cert-item').length;
-
-  // Set the initial button text
-  // (Change 'n+5' in CSS if you change the initial '4' here)
-  const showCount = 4; 
-  toggleBtn.textContent = `Show All ${totalItems} Certifications`;
-
-  // Add a click event listener to the button
-  toggleBtn.addEventListener('click', () => {
-    // Toggle the 'expanded' class on the list
-    certList.classList.toggle('expanded');
-    
-    // Change the button text based on the state
-    if (certList.classList.contains('expanded')) {
-      toggleBtn.textContent = 'Show Less';
-    } else {
-      toggleBtn.textContent = `Show All ${totalItems} Certifications`;
-    }
-  });
-</script>
-<div id="modal-overlay"></div>
-
-  <div class="project-modal" id="portscanner-modal">
-    <button class="modal-close-btn">&times;</button>
-    <h2>Port Scanner</h2>
-    <p>A command-line port scanning tool developed in Python. It identifies open ports on a target IP address and uses multithreading to increase scanning speed. It also includes banner grabbing to identify services running on open ports.</p>
-    
-    <div class="tech-tags">
-      <span>Python</span>
-      <span>Sockets</span>
-      <span>CLI</span>
-      <span>Multithreading</span>
-    </div>
-
-    <div class="modal-links">
-      <a href="https://github.com/garvit835/PortScanner" target="_blank" class="btn">View Code on GitHub</a>
-    </div>
-  </div>
-
-  <div class="project-modal" id="webscore-modal">
-    <button class="modal-close-btn">&times;</button>
-    <h2>WebScore</h2>
-    <p>A client-side OSINT tool to analyze a website's reputation. It uses various APIs, including WhoisXML and Google Safe Browsing, to check for legitimacy, HTTPS status, and archive history. The frontend is built with responsive HTML/CSS and JavaScript.</p>
-    
-    <div class="tech-tags">
-      <span>JavaScript</span>
-      <span>HTML/CSS</span>
-      <span>APIs</span>
-      <span>GitHub Pages</span>
-    </div>
-
-    <div class="modal-links">
-      <a href="https://github.com/garvit835/WebScore/" target="_blank" class="btn">View Code on GitHub</a>
-      <a href="https://garvit835.github.io/WebScore/" target="_blank" class="btn">View Live Demo</a>
-    </div>
-  </div>
 </body>
-
 </html>
