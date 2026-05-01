@@ -8,7 +8,7 @@ A high-performance, cinematic personal portfolio built with a cybersecurity-firs
 
 ## 🖥️ Live Demo
 
-**[garvit835.github.io](https://garvit835.github.io)**
+**[garvitranka.xyz](https://garvitranka.xyz)**
 
 ---
 
@@ -102,8 +102,8 @@ portfolio/
 
 ```bash
 # Clone the repo
-git clone https://github.com/garvit835/garvit835.github.io.git
-cd garvit835.github.io
+git clone https://github.com/garvit835/portfolio.git
+cd portfolio
 
 # Serve with any static server (e.g. Python)
 python -m http.server 8000
